@@ -12,19 +12,19 @@
         <div class="header-actions">
 
             <!-- Toggle tema -->
-            <Button
+            <!-- <Button
                 :icon="isDark ? 'pi pi-sun' : 'pi pi-moon'"
                 text rounded severity="secondary"
                 @click="toggleTheme"
                 v-tooltip.bottom="isDark ? 'Tema claro' : 'Tema escuro'"
-            />
+            /> -->
 
             <!-- Notificações -->
-            <Button
+            <!-- <Button
                 icon="pi pi-bell"
                 text rounded severity="secondary"
                 v-tooltip.bottom="'Notificações'"
-            />
+            /> -->
 
             <Divider layout="vertical" />
 
@@ -163,5 +163,15 @@ const userMenuItems = [
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .user-name {
+        display: none;
+    }
+
+    .app-header {
+        padding: 0 0.75rem;
+    }
 }
 </style>
